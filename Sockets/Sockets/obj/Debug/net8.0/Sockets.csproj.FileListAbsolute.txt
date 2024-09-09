@@ -1,0 +1,14 @@
+C:\ServidorC#\Sockets\Sockets\bin\Debug\net8.0\Sockets.exe
+C:\ServidorC#\Sockets\Sockets\bin\Debug\net8.0\Sockets.deps.json
+C:\ServidorC#\Sockets\Sockets\bin\Debug\net8.0\Sockets.runtimeconfig.json
+C:\ServidorC#\Sockets\Sockets\bin\Debug\net8.0\Sockets.dll
+C:\ServidorC#\Sockets\Sockets\bin\Debug\net8.0\Sockets.pdb
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.GeneratedMSBuildEditorConfig.editorconfig
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.AssemblyInfoInputs.cache
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.AssemblyInfo.cs
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.csproj.CoreCompileInputs.cache
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.dll
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\refint\Sockets.dll
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.pdb
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.genruntimeconfig.cache
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\ref\Sockets.dll

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ServidorC#\\Sockets\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66FBDBE3-281B-465F-B0A3-4C007B7EB97C}|Sockets\\Sockets.csproj|c:\\servidorc#\\sockets\\sockets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66FBDBE3-281B-465F-B0A3-4C007B7EB97C}|Sockets\\Sockets.csproj|solutionrelative:sockets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ServidorC#\\Sockets\\Sockets\\Program.cs",
+              "RelativeDocumentMoniker": "Sockets\\Program.cs",
+              "ToolTip": "C:\\ServidorC#\\Sockets\\Sockets\\Program.cs",
+              "RelativeToolTip": "Sockets\\Program.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwC8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T04:46:53.147Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
