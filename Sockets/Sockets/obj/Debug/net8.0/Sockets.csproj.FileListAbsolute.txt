@@ -12,3 +12,4 @@ C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\refint\Sockets.dll
 C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.pdb
 C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.genruntimeconfig.cache
 C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\ref\Sockets.dll
+C:\ServidorC#\Sockets\Sockets\obj\Debug\net8.0\Sockets.sourcelink.json

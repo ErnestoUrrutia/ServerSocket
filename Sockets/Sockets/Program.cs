@@ -39,7 +39,35 @@ class Program
                 {
                     foreach (Socket client in clientSockets)
                     {
-                        client.Send(serverMessageBytes);
+                        
+                        if (serverMessage=="fondo")
+                        {
+                            try
+                            {
+                                string imagePath = "fondo.jpg";
+                                byte[] imageBytes = File.ReadAllBytes(imagePath);
+                                // Primero enviamos el tamaño de la imagen
+                                byte[] sizeInfo = BitConverter.GetBytes(imageBytes.Length);
+
+                                client.Send(serverMessageBytes);
+                                client.Send(sizeInfo);
+
+                                // Enviar la imagen
+                                client.Send(imageBytes);
+                                Console.WriteLine("Imagen enviada.");
+                                Console.WriteLine("mandando imagen");
+                            }
+                            catch(Exception ex)
+                            {
+
+                            }
+                            
+                        }
+                        else
+                        {
+                            client.Send(serverMessageBytes);
+                        }
+                        
                     }
                 }
                 else
@@ -47,7 +75,34 @@ class Program
                     // Asume que 'clienteX' representa el índice del cliente (ej. cliente1, cliente2, etc.)
                     if (int.TryParse(destino.Substring(7), out int clientIndex) && clientIndex >= 1 && clientIndex <= clientSockets.Count)
                     {
-                        clientSockets[clientIndex - 1].Send(serverMessageBytes);
+                        if (serverMessage == "fondo")
+                        {
+                            try
+                            {
+                                string imagePath = "fondo.jpg";
+                                byte[] imageBytes = File.ReadAllBytes(imagePath);
+                                // Primero enviamos el tamaño de la imagen
+                                byte[] sizeInfo = BitConverter.GetBytes(imageBytes.Length);
+
+                                clientSockets[clientIndex - 1].Send(serverMessageBytes);
+                                clientSockets[clientIndex - 1].Send(sizeInfo);
+
+                                // Enviar la imagen
+                                clientSockets[clientIndex - 1].Send(imageBytes);
+                                Console.WriteLine("Imagen enviada.");
+                                Console.WriteLine("mandando imagen");
+                            }
+                            catch (Exception ex)
+                            {
+
+                            }
+
+                        }
+                        else
+                        {
+                            clientSockets[clientIndex - 1].Send(serverMessageBytes);
+                        }
+                        
                     }
                     else
                     {
