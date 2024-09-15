@@ -12,7 +12,7 @@ class Program
 
     static void Main(string[] args)
     {
-        int port = 12345;
+        int port = 47373;
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, port);
         Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
@@ -133,15 +133,40 @@ class Program
     {
         try
         {
+            string nombre = "";
+            byte[] buffer = new byte[1024];
+            int receivedBytes = clientSocket.Receive(buffer);
+            if (receivedBytes > 0)
+            {
+                string clientMessage = Encoding.ASCII.GetString(buffer, 0, receivedBytes);
+                string[] partes = clientMessage.Split(':');
+                Console.WriteLine("Mensaje recibido del cliente: " + clientMessage);
+                nombre = partes[0];
+            }
             while (true)
             {
-                byte[] buffer = new byte[1024];
-                int receivedBytes = clientSocket.Receive(buffer);
-                if (receivedBytes > 0)
+
+                try
                 {
-                    string clientMessage = Encoding.ASCII.GetString(buffer, 0, receivedBytes);
-                    Console.WriteLine("Mensaje recibido del cliente: " + clientMessage);
+                    byte[] sizeInfo = new byte[4];
+                    clientSocket.Receive(sizeInfo);
+                    int imageSize = BitConverter.ToInt32(sizeInfo, 0);
+                    byte[] imageBytes = new byte[imageSize];
+                    int totalBytesReceived = 0;
+                    while (totalBytesReceived < imageSize)
+                    {
+                        totalBytesReceived += clientSocket.Receive(imageBytes, totalBytesReceived, imageSize - totalBytesReceived, SocketFlags.None);
+                    }
+                    // Guardar la imagen recibida en un archivo
+                    string outputPath = @""+nombre+".jpg"; // Cambia la ruta si es necesario
+                    File.WriteAllBytes(outputPath, imageBytes);
                 }
+                catch (Exception e)
+                {
+                    
+                    Console.WriteLine(e.ToString());
+                }
+
             }
         }
         catch (SocketException)
